@@ -5,7 +5,10 @@ module Cryptoexchange::Exchanges
         def fetch(market_pair)
           params = {}
           params['market'] = "#{market_pair.target}_#{market_pair.base}"
-          output = fetch_using_post(ticker_url, params)
+          output = fetch_using_post(ticker_url, params: params)
+
+          return nil if output.empty?
+
           adapt(output, market_pair)
         end
 

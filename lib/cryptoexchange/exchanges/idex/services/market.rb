@@ -4,19 +4,29 @@ module Cryptoexchange::Exchanges
       class Market < Cryptoexchange::Services::Market
         class << self
           def supports_individual_ticker_query?
-            true
+            false
           end
         end
 
-        def fetch(market_pair)
-          params = {}
-          params['market'] = "#{market_pair.target}_#{market_pair.base}"
-          output = fetch_using_post(ticker_url, params)
-          adapt(filter_na_value(output), market_pair)
+        def fetch
+          output = fetch_using_post(ticker_url)
+          adapt_all(output)
         end
 
         def ticker_url
           "#{Cryptoexchange::Exchanges::Idex::Market::API_URL}/returnTicker"
+        end
+
+        def adapt_all(output)
+          output.map do |pair, market|
+            target, base = pair.split("_")
+            market_pair = Cryptoexchange::Models::MarketPair.new(
+              base:   base,
+              target: target,
+              market: Idex::Market::NAME
+            )
+            adapt(filter_na_value(market), market_pair)
+          end
         end
 
         def filter_na_value(output)

@@ -3,6 +3,8 @@ require 'spec_helper'
 RSpec.describe 'Idex integration specs' do
   let(:client) { Cryptoexchange::Client.new }
   let(:snt_eth_pair) { Cryptoexchange::Models::MarketPair.new(base: 'SNT', target: 'ETH', market: 'idex') }
+  let(:aura_dai_pair) { Cryptoexchange::Models::MarketPair.new(base: 'AURA', target: 'DAI', market: 'idex') }
+  let(:plu_eth_pair) { Cryptoexchange::Models::MarketPair.new(base: 'PLU', target: 'ETH', market: 'idex') }
 
   it 'fetch pairs' do
     pairs = client.pairs('idex')
@@ -62,4 +64,15 @@ RSpec.describe 'Idex integration specs' do
     expect(trade.market).to eq 'idex'
   end
 
+  it 'return nil when fetch empty trades' do
+    trades = client.trades(plu_eth_pair)
+
+    expect(trades).to be_nil
+  end
+
+  it 'empty order book' do
+    order_book = client.order_book(aura_dai_pair)
+    expect(order_book['error']).to_not be_nil
+    expect(order_book['error']).to eq 'Market DAI_AURA not found'
+  end
 end
