@@ -26,6 +26,7 @@ Or install it yourself as:
 | ----------------- | ------- | ---------- | ------- | ------- | ----------- |
 | Abucoins          | Y       | Y          | Y       |         | Y           |
 | ACX               | Y       | Y          | Y       |         | Y           |
+| AEX               | Y       | Y          | Y       |         | Y           |
 | Allcoin           | Y       | Y          |         |         | User-Defined|
 | ANX               | Y       |            |         |         | User-Defined|
 | Bancor            | Y       | N          | N       |         | Y           |
@@ -34,6 +35,7 @@ Or install it yourself as:
 | Bit-Z             | Y       |            |         |         | Y           |
 | Binance           | Y       | Y          |         |         | Y           |
 | Bitbay            | Y       |            |         |         | User-Defined|
+| Bitbank           | Y       | Y          | Y       |         | User-Defined|
 | Bitcoin Indonesia | Y       |            |         |         | User-Defined|
 | Bitconnect        | Y       |            |         |         | Y           |
 | Bitfinex          | Y       |            |         |         | Y           |
@@ -54,6 +56,7 @@ Or install it yourself as:
 | CCex              | Y       |            |         |         | Y           |
 | CHBTC             | Y       |            |         |         | User-Defined|
 | Cobinhood         | Y       | Y          |         |         | Y           |
+| CoinEgg           | Y       | Y          | Y       |         | User-Defined|
 | Coincheck         | Y       |            |         |         | User-Defined|
 | CoinExchange      | Y       |            |         |         | Y           |
 | Coinbene          | Y       | Y          | Y       |         | Y           |
@@ -74,7 +77,8 @@ Or install it yourself as:
 | HitBTC            | Y       |            |         |         | Y           |
 | Hksy              | Y       |            | Y       |         | User-Defined|
 | Huobi             | Y       |            |         |         | Y           |
-| Itbit             | Y       |            |         |         | User-Defined|
+| Itbit             | Y       | Y          | Y       |         | User-Defined|
+| Idex              | Y       | Y          | Y       |         | Y           |
 | KKex              | Y       | Y          | Y       |         | Y           |
 | Jubi              | Y       |            |         |         | Y           |
 | Koinex            | Y       |            |         |         | Y           |
@@ -83,6 +87,7 @@ Or install it yourself as:
 | Kucoin            | Y       |            |         |         | Y           |
 | Kuna              | Y       | Y          | Y       |         | User-Defined|
 | LakeBTC           | Y       |            |         |         | Y           |
+| Lbank             | Y       | Y          | Y       |         | Y           |
 | Liqui             | Y       |            |         |         | Y           |
 | LiteBit.eu        | Y       |            |         |         | Y           |
 | Livecoin          | Y       |            |         |         | Y           |
@@ -91,6 +96,7 @@ Or install it yourself as:
 | Lykke             | Y       | Y          | N       |         | Y           |
 | MercadoBitcoin    | Y       |            |         |         | User-Defined|
 | Mercatox          | Y       | N          | N       | N       | Y           |
+| Neraex            | Y       | Y          | Y       |         | Y           |
 | Nova Exchange     | Y       |            |         |         | Y           |
 | OKCoin            | Y       |            |         |         | User-Defined|
 | OKEx              | Y       | Y          | Y       |         | User-Defined|
